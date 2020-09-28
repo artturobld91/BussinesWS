@@ -12,14 +12,14 @@ namespace BussinesWS.Controllers
     [ApiController]
     public class BussinesWSController : ControllerBase
     {
-        // GET: api/<BussinesWSController>
+        // GET: api/<BussinesWSController> api/BussinesWS
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<BussinesWSController>/5
+        // GET api/<BussinesWSController>/5 api/BussinesWS/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
