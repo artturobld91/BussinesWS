@@ -21,6 +21,15 @@ namespace WSBussines.Controllers
             return "value";
         }
 
+        [Route("api/Login/LoginClient/{username}/{password}")]
+        [HttpGet]
+        // GET: api/Login/5
+        public string LoginClient(string username, string password)
+        {
+            string value = string.Format("Username: {0} - Password: {1}", username, password);
+            return value;
+        }
+
         // POST: api/Login
         public void Post([FromBody]string value)
         {
