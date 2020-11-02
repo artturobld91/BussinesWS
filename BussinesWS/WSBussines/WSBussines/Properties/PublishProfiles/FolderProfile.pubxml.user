@@ -235,8 +235,14 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>11/28/2018 12:00:36</publishTime>
     </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>11/28/2018 12:58:44</publishTime>
+    </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>11/28/2018 12:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>11/28/2018 13:01:26</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
       <publishTime>11/28/2018 12:01:00</publishTime>
@@ -266,10 +272,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/23/2014 12:57:34</publishTime>
     </File>
     <File Include="bin/WSBussines.dll">
-      <publishTime>10/25/2020 21:20:14</publishTime>
+      <publishTime>11/01/2020 19:59:04</publishTime>
     </File>
     <File Include="bin/WSBussines.pdb">
-      <publishTime>10/25/2020 21:20:14</publishTime>
+      <publishTime>11/01/2020 19:59:04</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>10/25/2020 16:07:00</publishTime>
@@ -362,7 +368,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/25/2020 16:06:48</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/25/2020 17:13:25</publishTime>
+      <publishTime>11/01/2020 19:59:06</publishTime>
     </File>
   </ItemGroup>
 </Project>

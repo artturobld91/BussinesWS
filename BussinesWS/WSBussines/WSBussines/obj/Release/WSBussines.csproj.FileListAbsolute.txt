@@ -83,3 +83,6 @@ C:\Users\Administrator\Documents\Github\BussinesWS\BussinesWS\WSBussines\WSBussi
 C:\Users\Administrator\Documents\Github\BussinesWS\BussinesWS\WSBussines\WSBussines\obj\Release\WSBussines.csproj.CopyComplete
 C:\Users\Administrator\Documents\Github\BussinesWS\BussinesWS\WSBussines\WSBussines\obj\Release\WSBussines.dll
 C:\Users\Administrator\Documents\Github\BussinesWS\BussinesWS\WSBussines\WSBussines\obj\Release\WSBussines.pdb
+C:\Users\Administrator\Documents\Github\BussinesWS\BussinesWS\WSBussines\WSBussines\bin\System.Web.Cors.dll
+C:\Users\Administrator\Documents\Github\BussinesWS\BussinesWS\WSBussines\WSBussines\bin\System.Web.Http.Cors.dll
+C:\Users\Administrator\Documents\Github\BussinesWS\BussinesWS\WSBussines\WSBussines\bin\System.Web.Http.Cors.xml

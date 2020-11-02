@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Data;
 using System.Data.Odbc;
+using WSBussines.Models;
 
 namespace WSBussines.Controllers
 {
@@ -26,10 +27,14 @@ namespace WSBussines.Controllers
         [Route("api/Login/LoginClient/{username}/{password}")]
         [HttpGet]
         // GET: api/Login/5
-        public string LoginClient(string username, string password)
+        public User LoginClient(string username, string password)
         {
             string value = string.Format("Username: {0} - Password: {1}", username, password);
-
+            User user = new User();
+            user.id = "";
+            user.username = "";
+            user.password = "";
+            user.usertype = "";
             try
             {
                 using (OdbcConnection connection = new OdbcConnection("DSN=BussinesDB;UID=postgres;PWD=password"))
@@ -43,6 +48,25 @@ namespace WSBussines.Controllers
                             if (reader.HasRows)
                             {
                                 value += @"\n Login Successful";
+                                while (reader.Read())
+                                {
+                                    if (!string.IsNullOrEmpty(reader.GetValue(reader.GetOrdinal("user_id")).ToString()))
+                                    {
+                                        user.id = reader.GetValue(reader.GetOrdinal("user_id")).ToString();
+                                    }
+                                    if (!string.IsNullOrEmpty(reader.GetValue(reader.GetOrdinal("email")).ToString()))
+                                    {
+                                        user.username = reader.GetValue(reader.GetOrdinal("email")).ToString();
+                                    }
+                                    if (!string.IsNullOrEmpty(reader.GetValue(reader.GetOrdinal("user_password")).ToString()))
+                                    {
+                                        user.password = reader.GetValue(reader.GetOrdinal("user_password")).ToString();
+                                    }
+                                    if (!string.IsNullOrEmpty(reader.GetValue(reader.GetOrdinal("user_type")).ToString()))
+                                    {
+                                        user.usertype = reader.GetValue(reader.GetOrdinal("user_type")).ToString();
+                                    }
+                                }
                             }
                             else
                             {
@@ -51,13 +75,14 @@ namespace WSBussines.Controllers
                         }
                     }
                 }
+                Console.Write(value);
             }
             catch (Exception ex)
             {
                 Console.Write(ex);
             }
 
-            return value;
+            return user;
         }
 
         // POST: api/Login
